@@ -29,11 +29,11 @@
 </div>
 <div class="wrapper">
 	<div class="container">
-
+	{% block content %}
 		{% for article in articles %}
 
 		<div class="post">
-			<h2><a href="show.html" title="Cocos2D开发iOS游戏运营开发技巧">{{ article.article_name }}</a></h2>
+			<h2><a href="{{ article.id }}" title="Cocos2D开发iOS游戏运营开发技巧">{{ article.article_name }}</a></h2>
 			<div class="entry">
 				<div class="postmetadata">
                 	作者: <a href="javascript:" title="由南通阁楼小编发布">{{ article.artist.author_name}}</a> 发表日期: 
@@ -58,6 +58,7 @@
 			</div>
 		</div>
 	 	{% endfor %}
+	 {% endblock %}
 	  </div>
 	  
 	</div>

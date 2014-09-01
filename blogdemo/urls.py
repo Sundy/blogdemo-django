@@ -10,4 +10,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/$', 'blog.views.blog_list'),
+    url(r'^blog/(?P<param>\d+)/$', 'blog.views.blog_show'),
 )

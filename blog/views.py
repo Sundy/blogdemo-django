@@ -11,3 +11,9 @@ def blog_list(request):
 	articles = Article.objects.all() 
 
 	return render_to_response('blog_list.html', locals())
+
+def blog_show(request, param):
+	
+	article = Article.objects.get(id = param) 
+
+	return render_to_response('blog_show.html', locals())
