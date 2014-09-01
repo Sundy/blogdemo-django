@@ -1,0 +1,31 @@
+{% extends "blog_list.html" %}
+
+{% block content %}
+
+<div class="post">
+			<h2><a href="show.html" title="Cocos2D开发iOS游戏运营开发技巧">{{ article.article_name }}</a></h2>
+			<div class="entry">
+				<div class="postmetadata">
+                	作者: <a href="javascript:" title="由南通阁楼小编发布">{{ article.artist.author_name}}</a> 发表日期: 
+					<span>{{ article.article_date }}</span>
+				</div>
+				<div class="thumbnail">
+					<a href="javascript:" title="阅读更多Cocos2D开发iOS游戏运营开发技巧"><img src="http://localhost/static/images/7.jpg" alt="阅读更多Cocos2D开发iOS游戏运营开发技巧"/></a>
+				</div>
+				<p>
+					丁群老师做iOS游戏运营的干货分享，包括游戏内付费，集成adMob广告，统计用户信息，分析用户行为，应用内购买，社交网络，国际化等等。绝对是别的地方看不到的课程，完全是老师的经验分享，丁群老师做iOS游戏运营的干货分享，包括游戏内付费，集成adMob广告，统计用户信息，分析用户行为，应用内购买，社交网络，国际化等等。绝对是别的地方看不到的课程，完全是老师的经验分享......
+				</p>
+				<div class="postmetadata">
+                	分类: 
+					<a href="javascript:" title="查看Cocos2D中的全部文章">{{ article.cate.cate_name }}</a> 标签: 
+					{% for keyword in article.keywords.all %}
+					<a href="javascript:">{{keyword.key_name}}</a> , 
+					{% endfor %}
+					评论数: 
+					<a href="javascript:" title="Cocos2D开发iOS游戏运营开发技巧">{{article.comment_count}}</a> 条
+				</div>
+				<a class="readmore" href="javascript:" title="阅读更多关于Cocos2D开发iOS游戏运营开发技巧">阅读更多&gt;&gt;</a>
+			</div>
+		</div>
+
+{% endblock %}
